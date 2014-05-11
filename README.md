@@ -12,9 +12,11 @@ Prerequisites
 
 Usage
 ---------------------------------
-This is a fully runnable example on receiving a payment that can be embedded within a workflow using iFrame and Moolah's API.  
+This is a fully runnable example on receiving a payment that can be embedded within a workflow using iFrame and Moolah's API.  Edit line 55 of payment.php with your Moolah API key.  Edit line 111 of payment.php to reflect location of index.html.  You will need to change line 6 of index.html if your web server is not running on localhost (port 80) to reflect 'event origin' of iFrame.  See next section for more details on the points above.
 
-Download the 3 pages and don't forget to drop in your Moolah API Key on line 55 of payment.php
+Usage in More Detail
+---------------------------------
+Download the 3 pages and don't forget to drop in your Moolah API Key on line 55 of payment.php.  You will also need to declare the location of the index.html page in the URL in line 111 of payment.php to send a message using post messgae protocol. 
 
 If your web server is anything except localhost on port 80, you will also have to change line 111 of payment.php and line 6 of index.html to reflect the location of your web server.  Read up on post message protocol for more info.
 
