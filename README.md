@@ -5,7 +5,9 @@ Runnable example for receiving payments in various cryptocurrencies using Moolah
 Prerequisites
 ---------------------------------
 1) Moolah account.  Sign up for a free merchant account at <a href="https://moolah.io">Moolah.io</a> and get your API key under API Settings (https://moolah.io/merchant/api for logged in users).
+
 2) You will need to enter in your Moolah API Key on line 55 of payment.php
+
 3) Not Internet Explorer.  I don't think this works in IE although there is a workaround for that to be added later.
 
 Usage
