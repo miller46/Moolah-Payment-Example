@@ -1,0 +1,69 @@
+<head>
+<script type="text/javascript">
+	window.addEventListener('message', receiveMessage, false);
+	function receiveMessage(event) {
+		//replace this with location of your iframe
+		if (event.origin == 'http://localhost') {
+			if (event.data == 'secreto') {
+				document.getElementById('payed').innerHTML = "<span style='color:green;'>Status: Payed!</span>";
+			}
+			else {
+				return;
+			}
+		}
+	}
+
+	function beginPayment() {
+		var frame, coin, amount, srcUrl;
+		coin = document.getElementById('coin').value;
+		amount = document.getElementById('amount').value;
+		srcUrl = "payment.php?" + "amount=" + amount + "&" + "coin=" + coin;
+
+		frame = document.createElement("IFRAME");
+		frame.setAttribute("src",srcUrl);
+		frame.setAttribute("id","frame");
+		document.getElementById('frameContainer').appendChild(frame);
+	}
+
+</script>
+<style>
+	iframe {
+		width: 500px;
+		height: 400px;
+	}
+</style>
+</head>
+<html>
+<body>
+
+<table width="100%">
+	<tr>
+		<td style="vertical-align: top;">
+			<h1>Moolah iFrame Payments Example</h1>
+		</td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top;">
+			<label for="coin">Select Coin: </label>
+			<select id="coin">
+				<option id="BTC" value="BTC" selected="selected">BTC</option>
+				<option id="DOGE" value="DOGE">DOGE</option>
+				<option id="LTC" value="LTC">LTC</option>
+				<option id="VTC" value="VTC">VTC</option>
+			</select>
+			<br/> 
+			<label for="amount">Enter amount</label>
+			<input type="number" id="amount" placeholder="(in selected coin)" />
+			<br/>
+			<input type="button" id="initPay" value="Initiate" onclick="beginPayment();" />
+			<br/>
+			<h2 id="payed">Status: <span style='color:red;'>Not paid</span></h2>
+		</td>
+		<td style="vertical-align: top;">
+			<div id="frameContainer">
+			</div>
+		</td>
+	</tr>
+</table>
+</body>
+</html>
