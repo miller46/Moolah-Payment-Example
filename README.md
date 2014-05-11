@@ -12,7 +12,7 @@ Prerequisites
 
 Usage
 ---------------------------------
-This is a fully runnable example on receiving a payment that can be embedded within a workflow using iFrame and Moolah's API.  Edit line 55 of payment.php with your Moolah API key.  Edit line 111 of payment.php to reflect location of index.html.  You will need to change line 6 of index.html if your web server is not running on localhost (port 80) to reflect 'event origin' of iFrame.  See next section for more details on the points above.
+This is a fully runnable example on receiving a payment that can be embedded within an existing workflow using iFrame and Moolah's API.  Edit line 55 of payment.php with your Moolah API key.  Edit line 111 of payment.php to reflect location of index.html.  You will need to change line 6 of index.html if your web server is not running on localhost (port 80) to reflect 'event origin' of iFrame.  See next section for more details on the points above.
 
 Usage in More Detail
 ---------------------------------
